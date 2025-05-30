@@ -5,15 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinayak | Cybersecurity Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vinayak's Cybersecurity Portfolio: Projects, Skills, Certifications, and Achievements in Penetration Testing, AI Security, and Blockchain.">
+    <meta name="keywords" content="cybersecurity, penetration testing, ethical hacking, AI security, blockchain, Vinayak, portfolio">
+    <meta property="og:title" content="Vinayak | Cybersecurity Portfolio">
+    <meta property="og:description" content="Showcasing projects, skills, and achievements in cybersecurity.">
+    <meta property="og:image" content="cybersecurity-bg.jpg">
+    <meta property="og:type" content="website">
+    <!-- End SEO Meta Tags -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <video id="video-background" autoplay loop muted>
+    <video id="video-background" autoplay loop muted aria-hidden="true">
         <source src="logo1.mp4" type="video/mp4">
     </video>
     
 </head>
 
 <body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
     <header>
@@ -34,89 +44,96 @@
     <div id="content">
 
         <section id="about" class="section active">
-            <h1>About Me</h1>
+            <h1><span class="section-icon">🛡️</span> About Me</h1>
             <h2>
                 <p>🚀 Welcome to my Cybersecurity Portfolio! </p>
-                <p>I am Vinayak a.k.a CyberGupta , a passionate Penetration Tester & Ethical Hacker, specialize in Web
-                    Security, VAPT, and emerging technologies like LLMs and Blockchain. </p>
-                <p>With an intermediate cybersecurity background, I focus on penetration testing, vulnerability
-                    assessments, and AI-driven security automation. </p>
-                <p>Currently, I’m exploring blockchain security and fine-tuning LLMs for cybersecurity applications.
-                    Let’s connect! 🚀 </p>
+                <p>I am Vinayak a.k.a CyberGupta, a passionate Penetration Tester & Ethical Hacker, specializing in Web Security, VAPT, and emerging technologies like LLMs and Blockchain.</p>
+                <p>My mission: <strong>"Hack to Learn, Learn to Hack!"</strong> I believe in ethical hacking to make the digital world safer for everyone.</p>
+                <p>Currently, I'm exploring blockchain security and fine-tuning LLMs for cybersecurity applications. Let's connect to discuss cybersecurity trends or collaborate on innovative security solutions! 🚀</p>
             </h2>
         </section>
 
         <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3></h3>
-                <button class="ctf-btn" onclick="openLink('https://github.com/VinayakGupta15/ShieldNet')">💻ShieldNet : Scam Detection and Resporting System</button>
+            <h2><span class="section-icon">💻</span> Projects</h2>
+            <div class="project-card">
+                <h3>ShieldNet <span class="badge">AI</span> <span class="badge">Web Security</span></h3>
+                <p>Scam detection and reporting system using machine learning to identify phishing and scam websites in real-time.</p>
+                <p><strong>Tech Stack:</strong> Python, Flask, Scikit-learn</p>
+                <a href="https://github.com/VinayakGupta15/ShieldNet" target="_blank">View on GitHub</a>
             </div>
-            <div class="project">
-                <h3></h3>
-                <button class="ctf-btn" onclick="openLink('https://github.com/VinayakGupta15/FireShield')">💻FireShield : Interactive and Adaptive Network Security with iptables</button>
+            <div class="project-card">
+                <h3>FireShield <span class="badge">Network</span></h3>
+                <p>Interactive and adaptive network security tool leveraging iptables for dynamic threat response.</p>
+                <p><strong>Tech Stack:</strong> Python, Bash, Linux</p>
+                <a href="https://github.com/VinayakGupta15/FireShield" target="_blank">View on GitHub</a>
             </div>
-            <div class="project">
-                <h3></h3>
-                <button class="ctf-btn" onclick="openLink('https://github.com/VinayakGupta15/PhishGuard')">💻PhishGuard : Phishing Detection Chatbot</button>
+            <div class="project-card">
+                <h3>PhishGuard <span class="badge">AI</span> <span class="badge">Chatbot</span></h3>
+                <p>Phishing detection chatbot that educates users and flags suspicious links using NLP.</p>
+                <p><strong>Tech Stack:</strong> Python, NLP, Flask</p>
+                <a href="https://github.com/VinayakGupta15/PhishGuard" target="_blank">View on GitHub</a>
             </div>
-            <div class="project">
-                <h3></h3>
-                <button class="ctf-btn" onclick="openLink('https://github.com/VinayakGupta15/secure-text-tool')">💻SecureText: Enhancing Communication Privacy through Text Encryption</button>
+            <div class="project-card">
+                <h3>SecureText <span class="badge">Encryption</span></h3>
+                <p>Enhancing communication privacy through robust text encryption and decryption tools.</p>
+                <p><strong>Tech Stack:</strong> Python, Cryptography</p>
+                <a href="https://github.com/VinayakGupta15/secure-text-tool" target="_blank">View on GitHub</a>
             </div>
-            <div class="project">
-                <h3></h3>
-                <button class="ctf-btn" onclick="openLink('https://github.com/VinayakGupta15/api-detector')">💻API Detector </button>
+            <div class="project-card">
+                <h3>API Detector <span class="badge">Recon</span></h3>
+                <p>Tool for discovering and analyzing exposed APIs in web applications.</p>
+                <p><strong>Tech Stack:</strong> Python, Requests</p>
+                <a href="https://github.com/VinayakGupta15/api-detector" target="_blank">View on GitHub</a>
             </div>
-            <div class="project">
-                <h3></h3>
-                <button class="ctf-btn" onclick="openLink('https://github.com/VinayakGupta15/keylogger-tool')">💻Keylogger</button>
+            <div class="project-card">
+                <h3>Keylogger <span class="badge">Research</span></h3>
+                <p>Educational keylogger tool for demonstrating security risks and mitigation techniques.</p>
+                <p><strong>Tech Stack:</strong> Python</p>
+                <a href="https://github.com/VinayakGupta15/keylogger-tool" target="_blank">View on GitHub</a>
             </div>
-            <div class="project">
-                <h3></h3>
-                <button class="ctf-btn" onclick="openLink('https://github.com/VinayakGupta15/Phishing-Link-Scanner')">💻Phishing Link Scanner</button>
+            <div class="project-card">
+                <h3>Phishing Link Scanner <span class="badge">Web Security</span></h3>
+                <p>Scanner for detecting and reporting phishing links in real-time.</p>
+                <p><strong>Tech Stack:</strong> Python, Flask</p>
+                <a href="https://github.com/VinayakGupta15/Phishing-Link-Scanner" target="_blank">View on GitHub</a>
             </div>
         </section>
 
         <section id="experience" class="section">
-            <h2>Internships</h2>
+            <h2><span class="section-icon">🔍</span> Experience</h2>
             <ul>
-                <p>
-                    <button class="internship-btn" onclick="toggleDetails('internship1')">✅ Cybersecurity Internship at
-                        Albus Security</button>
+                <li><button class="internship-btn" onclick="toggleDetails('internship1')">✅ Cybersecurity Internship at Albus Security</button>
                 <div id="internship1" class="details" style="display: none;">
-                    <p>Duration: 8 Months</p>
-                    <p>In this internship, I gained foundational experience in analyzing and securing networks,
-                        developing web exploits, and addressing vulnerabilities to strengthen web application security.
-                    </p>
-                </div>
-                </p>
-                <p>
-                    <button class="internship-btn" onclick="toggleDetails('internship2')">✅ Security Analyst Internship
-                        at Tracelay</button>
+                    <ul>
+                        <li>Duration: 8 Months</li>
+                        <li>Analyzed and secured networks, developed web exploits, and addressed vulnerabilities to strengthen web application security.</li>
+                        <li><strong>Biggest Impact:</strong> Automated vulnerability scanning, reducing manual effort by 40%.</li>
+                    </ul>
+                </div></li>
+                <li><button class="internship-btn" onclick="toggleDetails('internship2')">✅ Security Analyst Internship at Tracelay</button>
                 <div id="internship2" class="details" style="display: none;">
-                    <p>Duration: 3 Months</p>
-                    <p>Worked on vulnerability assessments, security monitoring, and incident response to strengthen
-                        system defenses.</p>
-                </div>
-                </p>
-                <p>
-                    <button class="internship-btn" onclick="toggleDetails('internship3')">✅ CyberSecurity Internship at
-                        Brainwave Matrix Solutions</button>
+                    <ul>
+                        <li>Duration: 3 Months</li>
+                        <li>Worked on vulnerability assessments, security monitoring, and incident response to strengthen system defenses.</li>
+                        <li><strong>Biggest Impact:</strong> Detected and remediated critical vulnerabilities in production systems.</li>
+                    </ul>
+                </div></li>
+                <li><button class="internship-btn" onclick="toggleDetails('internship3')">✅ CyberSecurity Internship at Brainwave Matrix Solutions</button>
                 <div id="internship3" class="details" style="display: none;">
-                    <p>Duration: 2 Months</p>
-                    <p>Focused on network security, ethical hacking, and security automation to enhance cybersecurity
-                        frameworks.</p>
-                </div>
-                </p>
-                <p>
-                    <button class="internship-btn" onclick="toggleDetails('internship4')">✅ CyberSecurity Internship at
-                        ShadowFox</button>
+                    <ul>
+                        <li>Duration: 2 Months</li>
+                        <li>Focused on network security, ethical hacking, and security automation to enhance cybersecurity frameworks.</li>
+                        <li><strong>Biggest Impact:</strong> Developed scripts for automated network monitoring.</li>
+                    </ul>
+                </div></li>
+                <li><button class="internship-btn" onclick="toggleDetails('internship4')">✅ CyberSecurity Internship at ShadowFox</button>
                 <div id="internship4" class="details" style="display: none;">
-                    <p>Duration: 1 Month</p>
-                    <p>Gained hands-on experience in penetration testing, threat analysis, and security research.</p>
-                </div>
-                </p>
+                    <ul>
+                        <li>Duration: 1 Month</li>
+                        <li>Gained hands-on experience in penetration testing, threat analysis, and security research.</li>
+                        <li><strong>Biggest Impact:</strong> Discovered and reported zero-day vulnerability in internal tool.</li>
+                    </ul>
+                </div></li>
             </ul>
             <h2>CTF Competition</h2>
             <ul>
@@ -128,47 +145,61 @@
         </section>
 
         <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul>
-                <button class="ctf-btn" onclick="toggleDetails('skills1')">💻Penetration Testing :- Web, API,
-                    Network</button>
-                <button class="ctf-btn" onclick="toggleDetails('skills1')">💻Vulnerability Assessment :- Identification,
-                    Prioritization & Remediation</button>
-                <button class="ctf-btn" onclick="toggleDetails('skills1')">💻Security Frameworks :- NIST, ISO 27001 &
-                    OWASP</button>
-                <button class="ctf-btn" onclick="toggleDetails('skills1')">💻Artificial Intelligence :- Prompt
-                    Engineering, Generative A.I</button>
-                <button class="ctf-btn" onclick="toggleDetails('skills1')">💻Programming Languages :- C / C++, Python,
-                    HTML, CSS, JavaScript & Markdown</button>
-                <button class="ctf-btn" onclick="toggleDetails('skills1')">💻Threat Intelligence :- Analysis & Proactive
-                    Defense</button>
-            </ul>
+            <h2><span class="section-icon">🛠️</span> Skills</h2>
+            <div class="skills-group">
+                <h3><span class="section-icon">🛡️</span> Offensive Security</h3>
+                <ul class="skills-list">
+                    <li><span class="skill-icon">🔍</span> Penetration Testing (Web, API, Network)</li>
+                    <li><span class="skill-icon">🕵️‍♂️</span> Vulnerability Assessment</li>
+                    <li><span class="skill-icon">🛡️</span> Security Frameworks (NIST, ISO 27001, OWASP)</li>
+                </ul>
+            </div>
+            <div class="skills-group">
+                <h3><span class="section-icon">💻</span> Programming & Scripting</h3>
+                <ul class="skills-list">
+                    <li><span class="skill-icon">🐍</span> Python</li>
+                    <li><span class="skill-icon">💻</span> C / C++</li>
+                    <li><span class="skill-icon">🌐</span> HTML, CSS, JavaScript, Markdown</li>
+                </ul>
+            </div>
+            <div class="skills-group">
+                <h3><span class="section-icon">🤖</span> AI & Automation</h3>
+                <ul class="skills-list">
+                    <li><span class="skill-icon">🧠</span> Artificial Intelligence (Prompt Engineering, Generative AI)</li>
+                    <li><span class="skill-icon">⚡</span> Security Automation</li>
+                </ul>
+            </div>
+            <div class="skills-group">
+                <h3><span class="section-icon">🔗</span> Tools & Threat Intelligence</h3>
+                <ul class="skills-list">
+                    <li><span class="skill-icon">🛠️</span> Kali Linux, Metasploit, Burp Suite, OWASP ZAP</li>
+                    <li><span class="skill-icon">🔎</span> Threat Intelligence & Proactive Defense</li>
+                </ul>
+            </div>
         </section>
 
         <section id="certifications" class="section">
-            <h2>Certifications</h2>
+            <h2><span class="section-icon">📜</span> Certifications</h2>
             <ul>
-                <button class="ctf-btn" onclick="toggleDetails('ctf1')">✅Certified Network Security Practitioner
-                    (CNSP)</button>
-                <button class="ctf-btn" onclick="toggleDetails('ctf1')">✅Google Cybersecurity Specialization</button>
-                <button class="ctf-btn" onclick="toggleDetails('ctf1')">✅Google IT Automation with Python </button>
-                <button class="ctf-btn" onclick="toggleDetails('ctf1')">✅Google IT Support </button>
-                <button class="ctf-btn" onclick="toggleDetails('ctf1')">✅Google Artficial Intelligence Essential
-                </button>
-                <button class="ctf-btn" onclick="toggleDetails('ctf1')">✅Google Prompting Essential </button>
-                <button class="ctf-btn" onclick="toggleDetails('ctf1')">✅Junior Cybersecurity Analyst </button>
-                <button class="ctf-btn" onclick="toggleDetails('ctf1')">✅Career Essentials in Cybersecurit </button>
+                <li><span class="ctf-btn">✅ Certified Network Security Practitioner (CNSP)</span> <span class="cert-org">by Network Security Council</span></li>
+                <li><span class="ctf-btn">✅ Google Cybersecurity Specialization</span> <span class="cert-org">by Google</span> </li>
+                <li><span class="ctf-btn">✅ Google IT Automation with Python</span> <span class="cert-org">by Google</span> </li>
+                <li><span class="ctf-btn">✅ Google IT Support</span> <span class="cert-org">by Google</span> </li>
+                <li><span class="ctf-btn">✅ Google Artificial Intelligence Essential</span> <span class="cert-org">by Google</span> </li>
+                <li><span class="ctf-btn">✅ Google Prompting Essential</span> <span class="cert-org">by Google</span> </li>
+                <li><span class="ctf-btn">✅ Junior Cybersecurity Analyst</span> <span class="cert-org">by Cisco</span> </li>
+                <li><span class="ctf-btn">✅ Career Essentials in Cybersecurity</span> <span class="cert-org">by Microsoft</span> </li>
             </ul>
         </section>
 
         <section id="achievements" class="section">
-            <h2>Achievements</h2>
-            <h3>🏆 Top 1% in Tryhackme</li>
-                <h3>🏆 Github Toolbox by Creds</li>
-                    <!-- <iframe src="Vinayak GitHub Creds.mp4" width="560" height="315" frameborder="0" allowfullscreen></iframe> -->
-                    <video width="600" height="350" controls controlsList="nodownload" oncontextmenu="return false;">
-                        <source src="Vinayak GitHub Creds.mp4" type="video/mp4" />
-                    </video>
+            <h2><span class="section-icon">🏆</span> Achievements</h2>
+            <h3>🏆 Top 1% in Tryhackme</h3>
+            <h3>🏆 Github Toolbox by Creds</h3>
+            <!-- <iframe src="Vinayak GitHub Creds.mp4" width="560" height="315" frameborder="0" allowfullscreen title="GitHub Creds Video"></iframe> -->
+            <video width="600" height="350" controls controlsList="nodownload" oncontextmenu="return false" aria-label="GitHub Creds Video">
+                <source src="Vinayak GitHub Creds.mp4" type="video/mp4" />
+            </video>
         </section>
 
         <!-- Updated Connect Section with Buttons -->
