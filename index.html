@@ -27,15 +27,22 @@
 
     <!-- Navigation -->
     <header>
-        <h1>Vinayak</h1>
-        <p><span id="typing"></span></p>
-        <nav>
+        <div class="header-flex">
+            <h1 style="flex:1;text-align:center;margin:0;">Vinayak</h1>
+            <a href="Vinayak-Resume.pdf" class="resume-btn" download style="margin-left:20px;">⬇️ Download Resume</a>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-controls="main-nav" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav id="main-nav">
             <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('sutrabyte')">SutraByte</button>
             <button onclick="showSection('projects')">Projects</button>
             <button onclick="showSection('experience')">Experience</button>
             <button onclick="showSection('achievements')">Achievements</button>
             <button onclick="showSection('skills')">Skills</button>
             <button onclick="showSection('certifications')">Certifications</button>
+            <button onclick="showSection('blog')">Blog</button>
             <button onclick="showSection('connect')">Connect</button>
         </nav>
     </header>
@@ -47,99 +54,215 @@
             <h1><span class="section-icon">🛡️</span> About Me</h1>
             <h2>
                 <p>🚀 Welcome to my Cybersecurity Portfolio! </p>
-                <p>I am Vinayak a.k.a CyberGupta, a passionate Penetration Tester & Ethical Hacker, specializing in Web Security, VAPT, and emerging technologies like LLMs and Blockchain.</p>
+                <p>I'm Vinayak Gupta, a passionate cybersecurity enthusiast, ethical hacker, and AI-integrated security innovator. With hands-on experience in Web & API Pentesting, Bug Bounty, and GenAI-powered security tools, I blend offensive security skills with AI-driven innovation.</p>
+                <p>I'm the founder of SutraByte, a free cybersecurity learning platform to help beginners break into cyber through blogs, structured resources, and community support. Currently I'm focused on building real-world solutions to tackle cyber threats of tomorrow.</p>
                 <p>My mission: <strong>"Hack to Learn, Learn to Hack!"</strong> I believe in ethical hacking to make the digital world safer for everyone.</p>
-                <p>Currently, I'm exploring blockchain security and fine-tuning LLMs for cybersecurity applications. Let's connect to discuss cybersecurity trends or collaborate on innovative security solutions! 🚀</p>
+
+                <div class="project-card">
+                    <h3>🎓 Education</h3>
+                    <p><strong>Bachelor of Technology in Computer Science Engineering</strong></p>
+                    <p><strong>Institution:</strong> Shaheed Bhagat Singh State University (2022 – 2026)</p>
+                    <p><strong>Relevant Coursework:</strong> Computer Networks, Operating Systems, Cloud Computing, Machine Learning, Data Science</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>🐛 Bug Bounty Achievements</h3>
+                    <p>Active bug bounty hunter with hands-on experience in vulnerability research and practical labs via TryHackMe. Reported vulnerabilities aligned with known CVEs and OWASP Top 10 standards.</p>
+                    <div class="project-details">
+                        <p><strong>Critical Vulnerabilities Found:</strong></p>
+                        <ul>
+                            <li>Server Disclosure via X-Forwarded-By header</li>
+                            <li>Session Cookie missing SameSite attribute</li>
+                            <li>CSP Wildcard Directive enabling external data exfiltration</li>
+                            <li>Sensitive Information Disclosure</li>
+                        </ul>
+                        <p><strong>Tools & Platforms:</strong> TryHackMe, PortSwigger, Burp Suite</p>
+                        <p><strong>Standards:</strong> CVE, OWASP Top 10</p>
+                    </div>
+                </div>
+
+                <div class="project-card sutrabyte-card">
+                    <h3>👑 Leadership & Community Impact</h3>
+                    <p><strong>SutraByte - Community-Driven Cybersecurity Platform</strong></p>
+                    <p>Founded and lead a free cybersecurity learning platform that democratizes cybersecurity education for beginners and professionals alike.</p>
+                    <div class="project-details">
+                        <p><strong>Community Metrics:</strong></p>
+                        <ul>
+                            <li>📈 100+ students reached within first month</li>
+                            <li>💬 60 WhatsApp Community members</li>
+                            <li>🔗 5K+ LinkedIn Followers</li>
+                            <li>👥 50+ beginners mentored personally</li>
+                        </ul>
+                        <p><strong>Content & Impact:</strong></p>
+                        <ul>
+                            <li>📚 Published structured 45-day cybersecurity roadmap</li>
+                            <li>📝 Daily hands-on content and educational blogs</li>
+                            <li>🎯 Regular community interaction and outreach</li>
+                            <li>🚀 Platform updates and content management</li>
+                        </ul>
+                        <p><strong>Mission:</strong> Making cybersecurity learning free, focused, and friendly for everyone.</p>
+                    </div>
+                </div>
             </h2>
+        </section>
+
+        <section id="sutrabyte" class="section">
+            <h2><span class="section-icon">🌐</span> SutraByte – The Cybersecurity Gateway for Every Learner</h2>
+            <div class="project-card sutrabyte-card">
+                <p><strong>SutraByte</strong> is a community-driven, beginner-friendly platform dedicated to <strong>democratizing cybersecurity education</strong>. Our mission is to provide <strong>structured, free, and practical learning resources</strong> to help students, enthusiasts, and aspiring professionals explore the cybersecurity landscape without financial or technical barriers.</p>
+                <p>Whether you're a total beginner or someone looking to level up your skills, SutraByte offers a clear, guided path—crafted by real learners who understand what truly helps.</p>
+                <hr/>
+                <h3>🚨 Why We Need SutraByte</h3>
+                <ul class="sutrabyte-why">
+                    <li><strong>Cybersecurity is critical but complex:</strong> In a world of increasing digital threats, cybersecurity knowledge is essential—but access to it is often expensive, fragmented, or overwhelming. SutraByte simplifies this journey.</li>
+                    <li><strong>Lack of beginner-focused resources:</strong> Most platforms assume prior knowledge. SutraByte starts from the very basics, hand-holding learners from foundational to intermediate skills in an engaging, structured way.</li>
+                    <li><strong>Expensive certifications & gated knowledge:</strong> Many learners can’t afford premium labs or courses. SutraByte curates free labs, open resources, and community support to make learning <strong>accessible and inclusive</strong>.</li>
+                    <li><strong>No guidance = No growth:</strong> Self-learning without structure often leads to burnout. SutraByte gives clear roadmaps, challenges, and practical labs to keep learners motivated and on track.</li>
+                </ul>
+                <hr/>
+                <h3>✨ Features & Benefits of SutraByte</h3>
+                <div class="sutrabyte-features-table-wrapper">
+                <table class="sutrabyte-features-table">
+                    <thead>
+                        <tr><th>🔧 Features</th><th>🎯 Benefits</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>🛡️ 45-Day Structured Cybersecurity Roadmap</td><td>Builds foundational to intermediate skills in a logical, daily progression</td></tr>
+                        <tr><td>🧠 Curated Google Labs & TryHackMe Rooms</td><td>Learn hands-on with real-world attack and defense environments—100% free</td></tr>
+                        <tr><td>📚 Weekly Blogs & Deep Dives</td><td>Get updated on latest tools, threat analysis, and career guidance</td></tr>
+                        <tr><td>💬 Active WhatsApp & LinkedIn Communities</td><td>Learn in public, share doubts, and grow with peers and mentors</td></tr>
+                        <tr><td>🎓 Career Prep & Resource Kits</td><td>Resume tips, certification guides, free mock tests, and more</td></tr>
+                        <tr><td>🔗 No Paywalls. No BS. Just Learning.</td><td>100% free forever. Transparent, community-first approach</td></tr>
+                    </tbody>
+                </table>
+                </div>
+                <p><strong>SutraByte isn't just a platform—it's a <span style="color:#00ffcc;">movement</span> to make cybersecurity learning <span style="color:#00ffcc;">free, focused, and friendly</span>.<br>Join us and be part of the next generation of ethical defenders. 🔐</strong></p>
+                <div class="cta-buttons">
+                    <a href="https://sutrabyte.vercel.app" class="cta-btn" target="_blank">🌐 Website</a>
+                    <a href="https://www.linkedin.com/company/sutrabyte" class="cta-btn" target="_blank">🔗 LinkedIn</a>
+                    <a href="https://www.youtube.com/@sutrabyte1" class="cta-btn" target="_blank">▶️ YouTube</a>
+                </div>
+            </div>
         </section>
 
         <section id="projects" class="section">
             <h2><span class="section-icon">💻</span> Projects</h2>
             <div class="project-card">
+                <h3>CyberCop AI <span class="badge">AI</span> <span class="badge">Security</span></h3>
+                <p>GenAI-Powered Cyber Threat Assistant for real-time threat analysis and incident response.</p>
+                <div class="project-details">
+                    <p><strong>Role:</strong> Team Lead & Backend Developer</p>
+                    <p><strong>Problem:</strong> Complex threat analysis and incident reporting</p>
+                    <p><strong>Impact:</strong> Participated in Intel Hackathon, pitched to Intel panel</p>
+                    <p><strong>Features:</strong> AI-based system to detect fake news, phishing, and suspicious attachments. Integrated with WhatsApp for real-time alerts.</p>
+                    <p><strong>Tech Stack:</strong> Python, Gemini API, Flask</p>
+                    <p><strong>Status:</strong> 🚀 Deployed</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>SmartHire <span class="badge">AI</span> <span class="badge">Recruitment</span></h3>
+                <p>AI-powered recruitment assistant that streamlines candidate screening, skill matching, and interview scheduling for faster, smarter hiring.</p>
+                <div class="project-details">
+                    <p><strong>Role:</strong> Full Stack Developer</p>
+                    <p><strong>Problem:</strong> Manual recruitment process optimization</p>
+                    <p><strong>Impact:</strong> Automated candidate screening and interview scheduling</p>
+                    <p><strong>Tech Stack:</strong> Python, AI/ML, Web Technologies</p>
+                    <p><strong>Status:</strong> 🚀 Hackathon Project</p>
+                </div>
+            </div>
+
+            <div class="project-card">
                 <h3>ShieldNet <span class="badge">AI</span> <span class="badge">Web Security</span></h3>
-                <p>Scam detection and reporting system using machine learning to identify phishing and scam websites in real-time.</p>
-                <p><strong>Tech Stack:</strong> Python, Flask, Scikit-learn</p>
-                <a href="https://github.com/VinayakGupta15/ShieldNet" target="_blank">View on GitHub</a>
+                <p>Advanced scam detection and reporting system using machine learning to identify phishing and scam websites in real-time.</p>
+                <div class="project-details">
+                    <p><strong>Role:</strong> Full Stack Developer</p>
+                    <p><strong>Problem:</strong> Real-time scam detection and prevention</p>
+                    <p><strong>Impact:</strong> Detected 1000+ phishing sites, 95% accuracy</p>
+                    <p><strong>Tech Stack:</strong> Python, Flask, Scikit-learn</p>
+                    <p><strong>Status:</strong> 🚀 Deployed</p>
+                </div>
             </div>
             <div class="project-card">
                 <h3>FireShield <span class="badge">Network</span></h3>
                 <p>Interactive and adaptive network security tool leveraging iptables for dynamic threat response.</p>
                 <p><strong>Tech Stack:</strong> Python, Bash, Linux</p>
-                <a href="https://github.com/VinayakGupta15/FireShield" target="_blank">View on GitHub</a>
             </div>
             <div class="project-card">
                 <h3>PhishGuard <span class="badge">AI</span> <span class="badge">Chatbot</span></h3>
                 <p>Phishing detection chatbot that educates users and flags suspicious links using NLP.</p>
                 <p><strong>Tech Stack:</strong> Python, NLP, Flask</p>
-                <a href="https://github.com/VinayakGupta15/PhishGuard" target="_blank">View on GitHub</a>
+                
             </div>
             <div class="project-card">
                 <h3>SecureText <span class="badge">Encryption</span></h3>
                 <p>Enhancing communication privacy through robust text encryption and decryption tools.</p>
                 <p><strong>Tech Stack:</strong> Python, Cryptography</p>
-                <a href="https://github.com/VinayakGupta15/secure-text-tool" target="_blank">View on GitHub</a>
+               
             </div>
             <div class="project-card">
                 <h3>API Detector <span class="badge">Recon</span></h3>
                 <p>Tool for discovering and analyzing exposed APIs in web applications.</p>
                 <p><strong>Tech Stack:</strong> Python, Requests</p>
-                <a href="https://github.com/VinayakGupta15/api-detector" target="_blank">View on GitHub</a>
+               
             </div>
             <div class="project-card">
                 <h3>Keylogger <span class="badge">Research</span></h3>
                 <p>Educational keylogger tool for demonstrating security risks and mitigation techniques.</p>
                 <p><strong>Tech Stack:</strong> Python</p>
-                <a href="https://github.com/VinayakGupta15/keylogger-tool" target="_blank">View on GitHub</a>
+                
             </div>
             <div class="project-card">
                 <h3>Phishing Link Scanner <span class="badge">Web Security</span></h3>
                 <p>Scanner for detecting and reporting phishing links in real-time.</p>
                 <p><strong>Tech Stack:</strong> Python, Flask</p>
-                <a href="https://github.com/VinayakGupta15/Phishing-Link-Scanner" target="_blank">View on GitHub</a>
+            
             </div>
         </section>
 
         <section id="experience" class="section">
             <h2><span class="section-icon">🔍</span> Experience</h2>
             <ul>
-                <li><button class="internship-btn" onclick="toggleDetails('internship1')">✅ Cybersecurity Internship at Albus Security</button>
+                <button class="internship-btn" onclick="toggleDetails('internship1')">✅ Bug Hunter and Ethical Hacker at Astraeus Next Gen Private Limited</button>
+                    <div id="internship1" class="details" style="display: none;">
+                        <ul>
+                            <li>Duration: 4 Months</li>
+                            <li>Contributed to BugGPT development and leveraged bug bounty skills to identify and exploit vulnerabilities, enhancing web application security.</li>
+                            <li><strong>Biggest Impact:</strong> Automated vulnerability detection, reducing manual analysis by 50%.</li>
+                        </ul>
+                    </div>
+                <button class="internship-btn" onclick="toggleDetails('internship1')">✅ Cybersecurity Internship at Albus Security</button>
                 <div id="internship1" class="details" style="display: none;">
                     <ul>
                         <li>Duration: 8 Months</li>
                         <li>Analyzed and secured networks, developed web exploits, and addressed vulnerabilities to strengthen web application security.</li>
                         <li><strong>Biggest Impact:</strong> Automated vulnerability scanning, reducing manual effort by 40%.</li>
                     </ul>
-                </div></li>
-                <li><button class="internship-btn" onclick="toggleDetails('internship2')">✅ Security Analyst Internship at Tracelay</button>
+                </div>
+                <button class="internship-btn" onclick="toggleDetails('internship2')">✅ Security Analyst Internship at Tracelay</button>
                 <div id="internship2" class="details" style="display: none;">
                     <ul>
                         <li>Duration: 3 Months</li>
                         <li>Worked on vulnerability assessments, security monitoring, and incident response to strengthen system defenses.</li>
                         <li><strong>Biggest Impact:</strong> Detected and remediated critical vulnerabilities in production systems.</li>
                     </ul>
-                </div></li>
-                <li><button class="internship-btn" onclick="toggleDetails('internship3')">✅ CyberSecurity Internship at Brainwave Matrix Solutions</button>
+                </div>
+                <button class="internship-btn" onclick="toggleDetails('internship3')">✅ CyberSecurity Internship at Brainwave Matrix Solutions</button>
                 <div id="internship3" class="details" style="display: none;">
                     <ul>
                         <li>Duration: 2 Months</li>
                         <li>Focused on network security, ethical hacking, and security automation to enhance cybersecurity frameworks.</li>
                         <li><strong>Biggest Impact:</strong> Developed scripts for automated network monitoring.</li>
                     </ul>
-                </div></li>
-                <li><button class="internship-btn" onclick="toggleDetails('internship4')">✅ CyberSecurity Internship at ShadowFox</button>
-                <div id="internship4" class="details" style="display: none;">
-                    <ul>
-                        <li>Duration: 1 Month</li>
-                        <li>Gained hands-on experience in penetration testing, threat analysis, and security research.</li>
-                        <li><strong>Biggest Impact:</strong> Discovered and reported zero-day vulnerability in internal tool.</li>
-                    </ul>
-                </div></li>
+                </div>
             </ul>
-            <h2>CTF Competition</h2>
+            <h2>CTF and Hackathons</h2>
             <ul>
                 <p>
-                    <button class="ctf-btn" onclick="toggleDetails('ctf1')">💻Nessus CTF Hackathon </button>
-                    <button class="ctf-btn" onclick="toggleDetails('ctf1')">💻CyberGenix CTF Hackathon </button>
+                    <ul><button class="ctf-btn" onclick="toggleDetails('ctf1')">💻Nessus CTF Hackathon </button></ul>
+                    <ul><button class="ctf-btn" onclick="toggleDetails('ctf1')">💻CyberGenix CTF Hackathon </button></ul>
+                    <ul><button class="ctf-btn" onclick="toggleDetails('ctf1')">💻Intel AI Hackathon </button></ul>
+                    <ul><button class="ctf-btn" onclick="toggleDetails('ctf1')">💻Cyber Challenge Hackathon by Delhi Police </button></ul>
                 </p>
             </ul>
         </section>
@@ -147,33 +270,49 @@
         <section id="skills" class="section">
             <h2><span class="section-icon">🛠️</span> Skills</h2>
             <div class="skills-group">
-                <h3><span class="section-icon">🛡️</span> Offensive Security</h3>
+                <h3><span class="section-icon">🛡️</span> Cybersecurity</h3>
                 <ul class="skills-list">
-                    <li><span class="skill-icon">🔍</span> Penetration Testing (Web, API, Network)</li>
-                    <li><span class="skill-icon">🕵️‍♂️</span> Vulnerability Assessment</li>
+                    <li><span class="skill-icon">🔍</span> Web/App/API Pentesting</li>
+                    <li><span class="skill-icon">🕵️‍♂️</span> XSS, SQLi, Burp Suite</li>
+                    <li><span class="skill-icon">🔎</span> Digital Forensics</li>
                     <li><span class="skill-icon">🛡️</span> Security Frameworks (NIST, ISO 27001, OWASP)</li>
                 </ul>
             </div>
             <div class="skills-group">
-                <h3><span class="section-icon">💻</span> Programming & Scripting</h3>
+                <h3><span class="section-icon">☁️</span> Cloud & SIEM</h3>
                 <ul class="skills-list">
-                    <li><span class="skill-icon">🐍</span> Python</li>
-                    <li><span class="skill-icon">💻</span> C / C++</li>
-                    <li><span class="skill-icon">🌐</span> HTML, CSS, JavaScript, Markdown</li>
+                    <li><span class="skill-icon">☁️</span> Google Cloud Platform, Cloud IAM</li>
+                    <li><span class="skill-icon">🛡️</span> VPCs, Security Command Center, Cloud Armor</li>
+                    <li><span class="skill-icon">📊</span> Splunk, Regex, Bash scripting</li>
+                    <li><span class="skill-icon">🔧</span> TryHackMe, PortSwigger, Google Cloud Shell</li>
                 </ul>
             </div>
             <div class="skills-group">
-                <h3><span class="section-icon">🤖</span> AI & Automation</h3>
+                <h3><span class="section-icon">🤖</span> AI/ML</h3>
                 <ul class="skills-list">
-                    <li><span class="skill-icon">🧠</span> Artificial Intelligence (Prompt Engineering, Generative AI)</li>
-                    <li><span class="skill-icon">⚡</span> Security Automation</li>
+                    <li><span class="skill-icon">🧠</span> NLP & LLMs</li>
+                    <li><span class="skill-icon">📊</span> Regression Analysis</li>
+                    <li><span class="skill-icon">⚡</span> Prompt Engineering</li>
+                    <li><span class="skill-icon">☁️</span> Azure AI Foundry</li>
                 </ul>
             </div>
             <div class="skills-group">
-                <h3><span class="section-icon">🔗</span> Tools & Threat Intelligence</h3>
+                <h3><span class="section-icon">💻</span> Tools & Programming</h3>
                 <ul class="skills-list">
-                    <li><span class="skill-icon">🛠️</span> Kali Linux, Metasploit, Burp Suite, OWASP ZAP</li>
-                    <li><span class="skill-icon">🔎</span> Threat Intelligence & Proactive Defense</li>
+                    <li><span class="skill-icon">🛠️</span> Wireshark, Nmap, Metasploit</li>
+                    <li><span class="skill-icon">🐍</span> Python, Flask</li>
+                    <li><span class="skill-icon">🌐</span> HTML, CSS, JavaScript</li>
+                    <li><span class="skill-icon">📝</span> Markdown, Git, GitHub</li>
+                </ul>
+            </div>
+            <div class="skills-group">
+                <h3><span class="section-icon">👥</span> Soft Skills</h3>
+                <ul class="skills-list">
+                    <li><span class="skill-icon">👨‍💼</span> Team Leadership</li>
+                    <li><span class="skill-icon">🌱</span> Community Building</li>
+                    <li><span class="skill-icon">✍️</span> Technical Blogging</li>
+                    <li><span class="skill-icon">🎤</span> Public Speaking</li>
+                    <li><span class="skill-icon">📋</span> Project Management</li>
                 </ul>
             </div>
         </section>
@@ -181,20 +320,23 @@
         <section id="certifications" class="section">
             <h2><span class="section-icon">📜</span> Certifications</h2>
             <ul>
-                <li><span class="ctf-btn">✅ Certified Network Security Practitioner (CNSP)</span> <span class="cert-org">by Network Security Council</span></li>
-                <li><span class="ctf-btn">✅ Google Cybersecurity Specialization</span> <span class="cert-org">by Google</span> </li>
-                <li><span class="ctf-btn">✅ Google IT Automation with Python</span> <span class="cert-org">by Google</span> </li>
-                <li><span class="ctf-btn">✅ Google IT Support</span> <span class="cert-org">by Google</span> </li>
-                <li><span class="ctf-btn">✅ Google Artificial Intelligence Essential</span> <span class="cert-org">by Google</span> </li>
-                <li><span class="ctf-btn">✅ Google Prompting Essential</span> <span class="cert-org">by Google</span> </li>
-                <li><span class="ctf-btn">✅ Junior Cybersecurity Analyst</span> <span class="cert-org">by Cisco</span> </li>
-                <li><span class="ctf-btn">✅ Career Essentials in Cybersecurity</span> <span class="cert-org">by Microsoft</span> </li>
+                <ul><span class="ctf-btn">✅ Certified Red Team Analyst</span> <span class="cert-org">by CyberWarfare Labs</span></ul>
+                <ul><span class="ctf-btn">✅ Certified Network Security Practitioner (CNSP)</span> <span class="cert-org">by SecOps Group</span></ul>
+                <ul><span class="ctf-btn">✅ Google Cybersecurity Specialization</span> <span class="cert-org">by Google</span> </ul>
+                <ul><span class="ctf-btn">✅ Google IT Automation with Python</span> <span class="cert-org">by Google</span> </ul>
+                <ul><span class="ctf-btn">✅ Google IT Support</span> <span class="cert-org">by Google</span> </ul>
+                <ul><span class="ctf-btn">✅ Google Artificial Intelligence Essential</span> <span class="cert-org">by Google</span> </ul>
+                <ul><span class="ctf-btn">✅ Google Prompting Essential</span> <span class="cert-org">by Google</span> </ul>
+                <ul><span class="ctf-btn">✅ Junior Cybersecurity Analyst</span> <span class="cert-org">by Cisco</span> </ul>
+                <ul><span class="ctf-btn">✅ Career Essentials in Cybersecurity</span> <span class="cert-org">by Microsoft</span> </ul>
+                <ul><span class="ctf-btn">✅ Azure AI Agent Foundry</span> <span class="cert-org">by Microsoft</span> </ul>
             </ul>
         </section>
 
         <section id="achievements" class="section">
             <h2><span class="section-icon">🏆</span> Achievements</h2>
-            <h3>🏆 Top 1% in Tryhackme</h3>
+            <h3>🏆 Winner of Tryhackme Diamond League</h3>
+            <h3>🏆 Top 1% on Tryhackme</h3>
             <h3>🏆 Github Toolbox by Creds</h3>
             <!-- <iframe src="Vinayak GitHub Creds.mp4" width="560" height="315" frameborder="0" allowfullscreen title="GitHub Creds Video"></iframe> -->
             <video width="600" height="350" controls controlsList="nodownload" oncontextmenu="return false" aria-label="GitHub Creds Video">
@@ -202,16 +344,62 @@
             </video>
         </section>
 
+        <section id="blog" class="section">
+            <h2><span class="section-icon">📝</span> Blog & Writeups</h2>
+            <div class="blog-card">
+                <h3>Latest Articles</h3>
+                <div class="blog-posts">
+                    <div class="blog-post">
+                        <h4>A Beginner’s Journey into Linux File Systems 🚀</h4>
+                        <p>Learn Basics of Linux File Systems</p>
+                        <a href="https://medium.com/@vinayak15/a-beginners-journey-into-linux-file-systems-e9ef8c665d5a" class="cta-btn" target="_blank">Read</a>
+                    </div>
+                    <div class="blog-post">
+                        <h4>Building an AI Study Buddy with Function Calling</h4>
+                        <p>Build an AI Study Buddy with Function Calling</p>
+                        <a href="https://medium.com/@vinayak15/building-an-ai-study-buddy-with-function-calling-bd923a6a90ef" class="cta-btn" target="_blank">Read More</a>
+                    </div>
+                
+                </div>
+                <div class="blog-cta">
+                    <p>I regularly write about my learnings, AI in cybersecurity, and career tips for beginners.</p>
+                    <a href="https://medium.com/@vinayak15" class="cta-btn" target="_blank">Read All Posts</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Updated Connect Section with Buttons -->
         <section id="connect" class="section">
-            <h2>Connect</h2>
-            <button class="connect-btn" onclick="openLink('https://t.me/CyberGupta')">📧 Telegram</button>
-            <button class="connect-btn" onclick="openLink('https://linkedin.com/in/vinayak15')">🔗 LinkedIn</button>
-            <button class="connect-btn" onclick="openLink('https://github.com/VinayakGupta15')">🐙 GitHub</button>
-            <button class="connect-btn" onclick="openLink('https://tryhackme.com/r/p/CyberGupta')">💻 TryHackme</button>
+            <h2><span class="section-icon">🤝</span> Let's Collaborate</h2>
+            <p>Open to internships, collaborations, bug bounty programs, and writing opportunities.</p>
+            <div class="project-details">
+                <p><strong>📧 Email:</strong> cybergupta00@gmail.com</p>
+                <p><strong>📍 Location:</strong> India</p>
+            </div>
+            <div class="connect-buttons">
+                <button class="connect-btn" onclick="openLink('https://t.me/CyberGupta')">📧 Telegram</button>
+                <button class="connect-btn" onclick="openLink('https://linkedin.com/in/vinayak15')">🔗 LinkedIn</button>
+                <button class="connect-btn" onclick="openLink('https://github.com/VinayakGupta15')">🐙 GitHub</button>
+                <button class="connect-btn" onclick="openLink('https://tryhackme.com/r/p/CyberGupta')">💻 TryHackme</button>
+                <button class="connect-btn" onclick="openLink('https://sutrabyte.vercel.app')">🌐 SutraByte</button>
+            </div>
         </section>
 
     </div>
+
+    <!-- Left Navigation Button and Menu -->
+    <button id="left-nav-btn" aria-label="Open section navigation">☰</button>
+    <nav id="left-side-nav">
+      <button onclick="showSection('about')">About</button>
+      <button onclick="showSection('sutrabyte')">SutraByte</button>
+      <button onclick="showSection('projects')">Projects</button>
+      <button onclick="showSection('experience')">Experience</button>
+      <button onclick="showSection('achievements')">Achievements</button>
+      <button onclick="showSection('skills')">Skills</button>
+      <button onclick="showSection('certifications')">Certifications</button>
+      <button onclick="showSection('blog')">Blog</button>
+      <button onclick="showSection('connect')">Connect</button>
+    </nav>
 
 </body>
 

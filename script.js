@@ -34,18 +34,66 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const mainNav = document.getElementById('main-nav');
+if (hamburger && mainNav) {
+    hamburger.addEventListener('click', function () {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        mainNav.classList.toggle('active');
+    });
+}
+
+// Left-side navigation toggle
+const leftNavBtn = document.getElementById('left-nav-btn');
+const leftSideNav = document.getElementById('left-side-nav');
+if (leftNavBtn && leftSideNav) {
+  leftNavBtn.addEventListener('click', function() {
+    leftSideNav.classList.toggle('open');
+    if (leftSideNav.classList.contains('open')) {
+      leftSideNav.focus();
+    }
+  });
+  // Close nav when clicking outside
+  document.addEventListener('click', function(e) {
+    if (leftSideNav.classList.contains('open') && !leftSideNav.contains(e.target) && e.target !== leftNavBtn) {
+      leftSideNav.classList.remove('open');
+    }
+  });
+  // Close nav on ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && leftSideNav.classList.contains('open')) {
+      leftSideNav.classList.remove('open');
+    }
+  });
+  // Optional: Close nav after clicking a section
+  leftSideNav.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      leftSideNav.classList.remove('open');
+    });
+  });
+}
+
 // Function to show sections
 function showSection(sectionId) {
     let sections = document.querySelectorAll(".section");
     sections.forEach(section => {
         section.style.display = "none"; // Hide all sections
+        section.classList.remove('active'); // Remove active class
     });
 
     let activeSection = document.getElementById(sectionId);
     if (activeSection) {
         activeSection.style.display = "block"; // Show only the selected section
+        setTimeout(() => activeSection.classList.add('active'), 10); // Add active class with a small delay
     } else {
         console.error("Section not found: " + sectionId);
+    }
+    // Close nav on mobile
+    if (mainNav && mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
     }
 }
 
