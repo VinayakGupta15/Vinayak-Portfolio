@@ -1,12 +1,18 @@
-/* Full-screen video background */
+/* Comprehensive mobile fix to prevent strips */
+* {
+    box-sizing: border-box;
+}
+
+/* Ensure video background doesn't cause issues */
 #video-background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
+    max-width: 100%;
 }
 
 /* Dark overlay to improve text visibility */
@@ -15,10 +21,11 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Adjust transparency */
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
     z-index: -1;
+    max-width: 100%;
 }
 
 /* General body styling */
@@ -26,10 +33,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #ffffff; /* Ensures text is readable */
+    color: #ffffff;
     text-align: center;
     position: relative;
     overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+/* HTML root element */
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* Section Styling */
@@ -43,6 +60,7 @@ body {
     max-width: 800px;
     opacity: 0;
     animation: fadeInSection 0.8s forwards;
+    box-sizing: border-box;
 }
 
 @keyframes fadeInSection {
@@ -55,6 +73,8 @@ header {
     background: rgba(0, 0, 0, 0.9);
     padding: 20px;
     box-shadow: 0 0 10px #00ffcc;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Button Styling */
@@ -438,11 +458,13 @@ button:hover {
         padding: 30px 5px;
         width: 98%;
         margin: 10px auto;
+        box-sizing: border-box;
     }
     .project-card, .sutrabyte-card, .blog-card {
         padding: 10px;
         margin: 5px;
         max-width: 100%;
+        box-sizing: border-box;
     }
     nav#main-nav {
         display: none !important;
@@ -469,6 +491,24 @@ button:hover {
         width: 70vw;
         min-width: 140px;
         padding: 30px 5px 5px 5px;
+        left: -100vw;
+        visibility: hidden;
+        box-sizing: border-box;
+    }
+    #left-side-nav.open {
+        left: 0;
+        visibility: visible;
+    }
+    /* Ensure no horizontal scroll on mobile */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    #content {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 }
 
